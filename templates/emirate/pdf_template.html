@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .table-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Ajuste la hauteur selon vos besoins */
+        }
+        table {
+            border-collapse: collapse;
+            width: 80%; /* Ajustez la largeur selon vos besoins */
+            margin: auto;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Date and Time</th>
+                    <th>Heure de Prélèvement</th>
+                    <th>Q1 Clim HVAC</th>
+                    <th>Q2 Local de Charge</th>
+                    <th>Q7 Éclairage Z1</th>
+                    <th>Q8 Admin</th>
+                    <th>Q9 Éclairage Z2</th>
+                    <th>Q10 Éclairage Z3</th>
+                    <th>TGBT</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for obj in object_list %}
+                <tr>
+                    <td>{{ obj.date }}</td>
+                    <td>{{ obj.heure_prelevement }}</td>
+                    <td>{{ obj.q1_clim_hvac }}</td>
+                    <td>{{ obj.q2_local_de_charge }}</td>
+                    <td>{{ obj.q7_eclairage_z1 }}</td>
+                    <td>{{ obj.q8_admin }}</td>
+                    <td>{{ obj.q9_eclairage_z2 }}</td>
+                    <td>{{ obj.q10_eclairage_z3 }}</td>
+                    <td>{{ obj.tgbt }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

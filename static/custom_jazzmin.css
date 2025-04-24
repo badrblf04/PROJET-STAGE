@@ -1,0 +1,16 @@
+/* Navbar customization */
+.navbar-custom {
+    background-color: #3f5689 !important; /* Dark Blue */
+    color: #fdbf6b !important; /* Peach Orange */
+}
+
+/* Accent customization */
+.accent-custom {
+    color: #fdbf6b !important; /* Peach Orange */
+}
+
+/* Sidebar customization */
+.sidebar-custom {
+    background-color: #3f5689 !important; /* Dark Blue */
+    color: #fdbf6b !important; /* Peach Orange */
+}

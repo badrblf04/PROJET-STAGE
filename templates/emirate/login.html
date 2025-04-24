@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    
+    <link rel="icon" href="https://media.licdn.com/dms/image/D4E0BAQGt78VaQXz-1g/company-logo_200_200/0/1680473320902/emirates_logistics_morocco_logo?e=2147483647&v=beta&t=-vmVbjhtK9X2OFnGR371eTmJPE6FI3DNqvyQt2mgwOY">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Registration</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;1,200&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Nunito Sans', sans-serif;
+            background-image: url('http://www.strategie.gouv.fr/sites/strategie.gouv.fr/files/thumbnails/image/fotolia_42381681_v1.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .container {
+            height: 100%;
+            width: 100%;
+            background: rgba(255, 255, 255, 0);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        #LoginAndRegistrationForm {
+            width: 400px;
+            background: #f8f9facb;
+            margin: 150px auto;
+            border-radius: 20px;
+            box-sizing: border-box;
+            padding: 15px;
+            box-shadow: 0px 0px 6px 0px #cdcdcd;
+            text-align: center;
+        }
+        #formTitle {
+            padding-top: 10px;
+            font-weight: bolder;
+            letter-spacing: 1px;
+            font-size: 25px;
+            color: #333;
+        }
+        #formSwitchBtn {
+            display: flex;
+            justify-content: center;
+            padding: 20px 0;
+        }
+        #formSwitchBtn button {
+            font-size: 17px;
+            letter-spacing: 1px;
+            font-weight: bolder;
+            width: 160px;
+            height: 40px;
+            border: 0;
+            cursor: pointer;
+            position: relative;
+            background: transparent;
+            border: 1px solid #3f5689;
+            transition: 0.1s;
+        }
+        #formSwitchBtn .active {
+            color: #fff;
+            background: #fdbf6b;
+        }
+        .input-text {
+            width: 100%;
+            height: 38px;
+            border: 1px solid #747474;
+            box-sizing: border-box;
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 17px;
+        }
+        .input-text:focus {
+            outline: none;
+            border-color: #3f5689;
+        }
+        .forgot-pass-remember-me {
+            display: flex;
+            justify-content: center;
+            gap: 90px;
+            font-size: 14px;
+        }
+        .forgot-pass-remember-me #ForgotPassword {
+            color: #002b27;
+            font-weight: bold;
+            transition: 0.4s;
+        }
+        .forgot-pass-remember-me #ForgotPassword:hover {
+            color: #008d7f;
+        }
+        .forgot-pass-remember-me input {
+            height: 12px;
+        }
+        .forgot-pass-remember-me label {
+            font-family: 'Nunito Sans', sans-serif;
+        }
+        .forgot-pass-remember-me a {
+            text-decoration: none;
+            font-family: 'Nunito Sans', sans-serif;
+            font-style: italic;
+        }
+        .Submit-Btn {
+            width: 100%;
+            height: 42px;
+            border: 0;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 17px;
+            letter-spacing: 1px;
+            font-weight: bolder;
+            transition: 0.4s;
+            background-color: #3f5689;
+            color: #fff;
+        }
+        .Submit-Btn:hover {
+            background-color: #fdbf6b;
+            color: #fff;
+        }
+        .dont-have-account, .already-have-account {
+            font-family: 'Nunito Sans', sans-serif;
+            letter-spacing: 0.3px;
+            font-size: 14px;
+            color: #747474;
+        }
+        .dont-have-account a, .already-have-account a {
+            font-family: 'Nunito Sans', sans-serif;
+            font-style: italic !important;
+            text-decoration: none;
+            color: #002b27;
+            font-weight: bold;
+            transition: 0.4s;
+        }
+        .dont-have-account a:hover, .already-have-account a:hover {
+            color: #008d7f;
+        }
+        #RegistrationFrom, #ForgotPasswordForm {
+            display: none;
+        }
+        .error-input {
+            border: 1px solid #ff5b5b;
+        }
+        .error-message {
+            font-size: 11px;
+            font-weight: bold;
+            color: #ff5b5b;
+            text-align: left;
+            margin: 0;
+            padding: 0;
+            margin-top: 2px;
+        }
+        .center img {
+            width: 150px;
+            margin-bottom: 10px;
+        }
+        footer {
+            background-color: #f1f1f100;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            text-decoration: none;
+            color: #19287a;
+            font-weight: bolder;
+        }
+        .emirates {
+            color: #3f5689;
+            font-weight: bold;
+        }
+        .supply {
+            color: #fdbf6b;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div id="LoginAndRegistrationForm">
+            <div class="center">
+                <img src="https://www.maritimenews.ma/images/2023/Logistique/Emirates-Logistics-Emploi-Recrutement-1.png">
+            </div>
+            <h1 id="formTitle">Login</h1>
+            <div id="formSwitchBtn">
+                <button onclick="showForm('LoginFrom')" id="ShowLoginBtn" class="active">Login</button>
+                <button onclick="showForm('RegistrationFrom')" id="ShowRegistrationBtn">Registration</button>
+            </div>
+            <div id="LoginFrom">
+                <form id="login-form" method="post" action="{% url 'login' %}">
+                    {% csrf_token %}
+                    <div class="center">
+                        <input type="text" name="username" class="input-text" placeholder="Nom d'utilisateur" required>
+                        <br><br>
+                        <input type="password" name="password" class="input-text mt-10" placeholder="Mot de passe" required>
+                    </div><br>
+                    <div class="center mt-20">
+                        <input class="Submit-Btn" type="submit" value="Login" id="LoginBtn">
+                    </div>
+                </form>
+                <p class="center mt-20 dont-have-account">Don't have an account? <a href="javascript:void(0);" onclick="showForm('RegistrationFrom')">Register now</a></p>
+            </div>
+            <div id="RegistrationFrom" style="display: none;">
+                <form id="registration-form" method="post" action="{% url 'register' %}">
+                    {% csrf_token %}
+                    <div class="center">
+                        <input type="text" name="username" class="input-text" placeholder="Nom d'utilisateur" required>
+                        <br><br>
+                        <input type="email" name="email" class="input-text" placeholder="Email" required>
+                        <br><br>
+                        <input type="password" name="password1" class="input-text mt-10" placeholder="Mot de passe" required>
+                        <br><br>
+                        <input type="password" name="password2" class="input-text mt-10" placeholder="Confirmer Mot de passe" required>
+                    </div><br>
+                    <div class="center mt-20">
+                        <input class="Submit-Btn" type="submit" value="Register" id="RegistrationBtn">
+                    </div>
+                </form>
+                <p class="center mt-20 already-have-account">Already have an account? <a href="javascript:void(0);" onclick="showForm('LoginFrom')">Login here</a></p>
+            </div>
+            {% if messages %}
+                <div class="messages">
+                    {% for message in messages %}
+                        <p{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</p>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+    </div>
+    <footer>
+        <a href="http://www.emirateslogistics.com" class="emirates" target="_blank">🚛📦Emirates</a>
+
+    </footer>
+    <script>
+        function showForm(formId) {
+            document.getElementById('LoginFrom').style.display = '';
+            document.getElementById('RegistrationFrom').style.display = 'none';
+            document.getElementById(formId).style.display = 'block';
+            
+            document.getElementById('ShowLoginBtn').classList.remove('active');
+            document.getElementById('ShowRegistrationBtn').classList.remove('active');
+            
+            if (formId === 'LoginFrom') {
+                document.getElementById('ShowLoginBtn').classList.add('active');
+                document.getElementById('formTitle').textContent = 'Login';
+            } else {
+                document.getElementById('ShowRegistrationBtn').classList.add('active');
+                document.getElementById('formTitle').textContent = 'Registration';
+            }
+        }
+    </script>
+</body>
+</html>
