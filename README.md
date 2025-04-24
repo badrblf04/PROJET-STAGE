@@ -6,6 +6,6 @@ Ce projet présente une interface d’authentification avec un tableau de bord i
 
 ### 📸 Captures d'écran
 
-<img src="Captures/image1.png" width="500">
-<br>
 <img src="Captures/image.png" width="500">
+<br>
+<img src="Captures/img.png" width="500">
